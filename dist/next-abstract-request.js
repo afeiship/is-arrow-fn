@@ -2,8 +2,8 @@
  * name: @feizheng/next-abstract-request
  * description: Standard abstract request.
  * homepage: https://github.com/afeiship/next-abstract-request
- * version: 1.1.6
- * date: 2020-06-29T05:06:56.818Z
+ * version: 1.1.7
+ * date: 2020-06-29T05:08:05.836Z
  * license: MIT
  */
 

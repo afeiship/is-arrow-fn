@@ -21,6 +21,7 @@
         return function () {
           // [ method, url, data, options ]
           var args = nxParseRequestArgs(arguments, true);
+          args[0] = inMethod;
           return this.request.apply(this, args);
         };
       }

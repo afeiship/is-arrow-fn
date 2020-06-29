@@ -14,7 +14,7 @@
       defaults: function () {
         return null;
       },
-      request: function (inUrl, inMethod, inData, inOptions) {
+      request: function (inMethod, inUrl, inData, inOptions) {
         nx.error(MSG_IMPL);
       },
       'get,post,put,patch,delete,head': function (inMethod) {

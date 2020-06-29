@@ -2,6 +2,7 @@
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@feizheng/next-js-core2');
   var nxStubSingleton = nx.stubSingleton || require('@feizheng/next-stub-singleton');
+  var nxParseRequestArgs = nx.parseArgs || require('@feizheng/next-parse-request-args');
   var MSG_IMPL = 'Must be implement.';
 
   var NxAbstractRequest = nx.declare('nx.AbstractRequest', {
@@ -17,8 +18,10 @@
         nx.error(MSG_IMPL);
       },
       'get,post,put,patch,delete,head': function (inMethod) {
-        return function (inUrl, inData, inOptions) {
-          return this.request(inUrl, inMethod, inData, inOptions);
+        return function () {
+          // [ method, url, data, options ]
+          var args = [inMethod].concat(nxParseRequestArgs(arguments, true));
+          return this.request.apply(this, args);
         };
       }
     }

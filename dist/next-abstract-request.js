@@ -2,8 +2,8 @@
  * name: @feizheng/next-abstract-request
  * description: Standard abstract request.
  * homepage: https://github.com/afeiship/next-abstract-request
- * version: 1.1.7
- * date: 2020-06-29T05:08:05.836Z
+ * version: 1.1.8
+ * date: 2020-09-17T08:30:50.495Z
  * license: MIT
  */
 
@@ -29,8 +29,8 @@
       'get,post,put,patch,delete,head': function (inMethod) {
         return function () {
           // [ method, url, data, options ]
-          var args = nxParseRequestArgs(arguments, true);
-          args[0] = inMethod;
+          var inputArgs = [inMethod].concat(nx.slice(arguments));
+          var args = nxParseRequestArgs(inputArgs, true);
           return this.request.apply(this, args);
         };
       }

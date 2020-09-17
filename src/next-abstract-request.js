@@ -20,8 +20,8 @@
       'get,post,put,patch,delete,head': function (inMethod) {
         return function () {
           // [ method, url, data, options ]
-          var args = nxParseRequestArgs(arguments, true);
-          args[0] = inMethod;
+          var inputArgs = [inMethod].concat(nx.slice(arguments));
+          var args = nxParseRequestArgs(inputArgs, true);
           return this.request.apply(this, args);
         };
       }

@@ -1,8 +1,17 @@
-(function () {
+/*!
+ * name: @jswork/next-abstract-request
+ * description: Standard abstract request.
+ * homepage: https://github.com/afeiship/next-abstract-request
+ * version: 1.0.0
+ * date: 2020-11-19 14:09:28
+ * license: MIT
+ */
+
+(function() {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@feizheng/next-js-core2');
-  var nxStubSingleton = nx.stubSingleton || require('@feizheng/next-stub-singleton');
-  var nxParseRequestArgs = nx.parseArgs || require('@feizheng/next-parse-request-args');
+  var nx = global.nx || require('@jswork/next');
+  var nxStubSingleton = nx.stubSingleton || require('@jswork/next-stub-singleton');
+  var nxParseRequestArgs = nx.parseArgs || require('@jswork/next-parse-request-args');
   var MSG_IMPL = 'Must be implement.';
 
   var NxAbstractRequest = nx.declare('nx.AbstractRequest', {
@@ -27,6 +36,7 @@
       }
     }
   });
+
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = NxAbstractRequest;

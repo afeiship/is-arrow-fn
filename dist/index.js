@@ -3,7 +3,7 @@
  * description: Standard abstract request.
  * homepage: https://github.com/afeiship/next-abstract-request
  * version: 1.0.0
- * date: 2020-11-19 14:09:28
+ * date: 2020-11-19 14:10:16
  * license: MIT
  */
 

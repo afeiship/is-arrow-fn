@@ -26,7 +26,7 @@ npm install -S @jswork/next-abstract-request
 
 ## usage
 ```js
-import NxAbstractRequest from '@feizheng/next-abstract-request';
+import NxAbstractRequest from '@jswork/next-abstract-request';
 ```
 
 ## license

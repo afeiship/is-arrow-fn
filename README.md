@@ -30,6 +30,11 @@ npm install -S @jswork/next-abstract-request
 import NxAbstractRequest from '@jswork/next-abstract-request';
 // https://github.com/afeiship/next-fetch/blob/master/src/index.js
 
+var DEFAULT_OPTIONS = {
+  dataType: 'json',
+  fetch: global.fetch,
+  responseType: 'json'
+};
 
 var BetterFetch = nx.declare('nx.BetterFetch', {
   extends: NxAbstractRequest,

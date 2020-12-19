@@ -1,4 +1,4 @@
-(function() {
+(function () {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@jswork/next');
   var nxStubSingleton = nx.stubSingleton || require('@jswork/next-stub-singleton');
@@ -17,7 +17,7 @@
       request: function (inMethod, inUrl, inData, inOptions) {
         nx.error(MSG_IMPL);
       },
-      'get,post,put,patch,delete,head': function (inMethod) {
+      'get,post,put,patch,delete,head,fetch': function (inMethod) {
         return function () {
           // [ method, url, data, options ]
           var inputArgs = [inMethod].concat(nx.slice(arguments));
@@ -27,7 +27,6 @@
       }
     }
   });
-
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = NxAbstractRequest;

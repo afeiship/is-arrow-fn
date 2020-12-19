@@ -3,11 +3,11 @@
  * description: Standard abstract request.
  * homepage: https://github.com/afeiship/next-abstract-request
  * version: 1.0.0
- * date: 2020-11-19 14:10:16
+ * date: 2020-12-19 10:07:29
  * license: MIT
  */
 
-(function() {
+(function () {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@jswork/next');
   var nxStubSingleton = nx.stubSingleton || require('@jswork/next-stub-singleton');
@@ -26,7 +26,7 @@
       request: function (inMethod, inUrl, inData, inOptions) {
         nx.error(MSG_IMPL);
       },
-      'get,post,put,patch,delete,head': function (inMethod) {
+      'get,post,put,patch,delete,head,fetch': function (inMethod) {
         return function () {
           // [ method, url, data, options ]
           var inputArgs = [inMethod].concat(nx.slice(arguments));
@@ -36,7 +36,6 @@
       }
     }
   });
-
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = NxAbstractRequest;

@@ -3,12 +3,12 @@
  * description: Standard abstract request.
  * homepage: https://github.com/afeiship/next-abstract-request
  * version: 1.0.1
- * date: 2020-12-19 10:08:09
+ * date: 2021-01-06 21:35:18
  * license: MIT
  */
 
 (function () {
-  var global = global || this || window || Function('return this')();
+  var global = global || window || Function('return this')();
   var nx = global.nx || require('@jswork/next');
   var nxStubSingleton = nx.stubSingleton || require('@jswork/next-stub-singleton');
   var nxParseRequestArgs = nx.parseArgs || require('@jswork/next-parse-request-args');

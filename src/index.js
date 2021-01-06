@@ -1,5 +1,5 @@
 (function () {
-  var global = global || this || window || Function('return this')();
+  var global = global || window || Function('return this')();
   var nx = global.nx || require('@jswork/next');
   var nxStubSingleton = nx.stubSingleton || require('@jswork/next-stub-singleton');
   var nxParseRequestArgs = nx.parseArgs || require('@jswork/next-parse-request-args');

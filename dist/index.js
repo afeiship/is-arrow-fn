@@ -2,8 +2,8 @@
  * name: @jswork/next-abstract-request
  * description: Standard abstract request.
  * homepage: https://github.com/afeiship/next-abstract-request
- * version: 1.0.2
- * date: 2021-01-09 14:46:28
+ * version: 1.0.3
+ * date: 2021-01-09 16:23:07
  * license: MIT
  */
 

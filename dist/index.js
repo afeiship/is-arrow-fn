@@ -2,13 +2,13 @@
  * name: @jswork/next-abstract-request
  * description: Standard abstract request.
  * homepage: https://github.com/afeiship/next-abstract-request
- * version: 1.0.3
- * date: 2021-01-09 16:23:07
+ * version: 1.0.4
+ * date: 2021-01-09 17:00:54
  * license: MIT
  */
 
 (function () {
-  var global = global || Function('return this')();
+  var global = typeof window !== 'undefined' ? window : this || Function('return this')();
   var nx = global.nx || require('@jswork/next');
   var nxStubSingleton = nx.stubSingleton || require('@jswork/next-stub-singleton');
   var nxParseRequestArgs = nx.parseArgs || require('@jswork/next-parse-request-args');

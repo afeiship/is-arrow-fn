@@ -2,8 +2,8 @@
  * name: @jswork/next-abstract-request
  * description: Standard abstract request.
  * homepage: https://github.com/afeiship/next-abstract-request
- * version: 1.0.5
- * date: 2021-05-21 10:56:53
+ * version: 1.0.6
+ * date: 2021-05-21 10:59:12
  * license: MIT
  */
 
@@ -19,6 +19,7 @@
   var defaults = {
     pipeStyle: 'fetch',
     dataType: 'json',
+    responseType: 'json',
     interceptors: [],
     transformRequest: nx.stubValue,
     transformResponse: nx.stubValue,

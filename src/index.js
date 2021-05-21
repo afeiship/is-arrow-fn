@@ -10,6 +10,7 @@
   var defaults = {
     pipeStyle: 'fetch',
     dataType: 'json',
+    responseType: 'json',
     interceptors: [],
     transformRequest: nx.stubValue,
     transformResponse: nx.stubValue,

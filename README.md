@@ -31,9 +31,13 @@ import NxAbstractRequest from '@jswork/next-abstract-request';
 // https://github.com/afeiship/next-fetch/blob/master/src/index.js
 
 var DEFAULT_OPTIONS = {
+  pipeStyle: 'fetch',
   dataType: 'json',
-  fetch: global.fetch,
-  responseType: 'json'
+  responseType: 'json',
+  interceptors: [],
+  transformRequest: nx.stubValue,
+  transformResponse: nx.stubValue,
+  transformError: nx.stubValue
 };
 
 var BetterFetch = nx.declare('nx.BetterFetch', {

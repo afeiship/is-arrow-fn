@@ -36,6 +36,8 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
+    "@jswork/next-fetch-with-response-type": "^1.0.0",
+    "@jswork/next-interceptor": "^1.0.4",
     "@jswork/next-parse-request-args": "^1.0.0",
     "@jswork/next-stub-singleton": "^1.0.0"
   },

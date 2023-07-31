@@ -26,7 +26,7 @@ const obj = {
     console.log('normal fn3', this);
   },
   fn4: function () {
-    return ()=>{
+    return () => {
       console.log('123');
     }
   }

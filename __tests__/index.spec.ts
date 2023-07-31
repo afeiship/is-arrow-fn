@@ -48,4 +48,28 @@ describe('api.basic', () => {
     expect(isArrowFn(fn3)).toBe(true);
     expect(isArrowFn(fn4)).toBe(false);
   });
+
+  test('05. an example', () => {
+    const obj = {
+      fn1() {
+        console.log('normal fn1', this);
+      },
+      fn2: () => {
+        console.log('arrow fn2', this);
+      },
+      fn3: function () {
+        console.log('normal fn3', this);
+      },
+      fn4: function () {
+        return () => {
+          console.log('123');
+        };
+      },
+    };
+
+    expect(isArrowFn(obj.fn1)).toBe(false);
+    expect(isArrowFn(obj.fn2)).toBe(true);
+    expect(isArrowFn(obj.fn3)).toBe(false);
+    expect(isArrowFn(obj.fn4)).toBe(false);
+  });
 });

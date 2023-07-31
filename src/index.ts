@@ -1,5 +1,7 @@
 declare var wx: any;
 
+// https://stackoverflow.com/questions/28222228/javascript-es6-test-for-arrow-function-built-in-function-regular-function
+
 const FN_RE = /^([^{=]+|\(.*\)\s*)?=>/;
 const BLANK_RE = /\s/;
 

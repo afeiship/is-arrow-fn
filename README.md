@@ -17,19 +17,19 @@ import isArrowFn from '@jswork/is-arrow-fn';
 
 const obj = {
   fn1() {
-    console.log('normal fn1', this);
+    console.log("normal fn1", this);
   },
   fn2: () => {
-    console.log('arrow fn2', this);
+    console.log("arrow fn2", this);
   },
   fn3: function () {
-    console.log('normal fn3', this);
+    console.log("normal fn3", this);
   },
   fn4: function () {
     return () => {
-      console.log('123');
-    }
-  }
+      console.log("123");
+    };
+  },
 };
 
 isArrowFn(obj.fn1); // false

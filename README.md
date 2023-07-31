@@ -15,7 +15,27 @@ npm install @jswork/is-arrow-fn
 ```js
 import isArrowFn from '@jswork/is-arrow-fn';
 
-// usage goes here.
+const obj = {
+  fn1() {
+    console.log('normal fn1', this);
+  },
+  fn2: () => {
+    console.log('arrow fn2', this);
+  },
+  fn3: function () {
+    console.log('normal fn3', this);
+  },
+  fn4: function () {
+    return ()=>{
+      console.log('123');
+    }
+  }
+};
+
+isArrowFn(obj.fn1); // false
+isArrowFn(obj.fn2); // true
+isArrowFn(obj.fn3); // false
+isArrowFn(obj.fn4); // false
 ```
 
 ## license

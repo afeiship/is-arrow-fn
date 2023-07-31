@@ -1,6 +1,6 @@
 {
   "name": "@jswork/is-arrow-fn",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Determine if a function is an ES6 arrow function or not.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
